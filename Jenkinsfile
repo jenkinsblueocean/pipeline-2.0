@@ -28,7 +28,7 @@ pipeline {
     stage('Stage 3') {
       steps {
         catchError() {
-          error 'error'
+          error 'errore con catchError'
         }
         
       }
