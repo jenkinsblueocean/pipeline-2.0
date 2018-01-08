@@ -2,8 +2,22 @@ pipeline {
   agent any
   stages {
     stage('Stage 1') {
-      steps {
-        echo 'Executing without errors'
+      parallel {
+        stage('Stage 1') {
+          steps {
+            echo 'Executing without errors'
+          }
+        }
+        stage('Stage 1 parallel') {
+          steps {
+            error 'error stage 1 parallel'
+          }
+        }
+        stage('Stage 1 parallel-bis') {
+          steps {
+            echo 'Executing stage 1 parallel-bis no errors'
+          }
+        }
       }
     }
     stage('Stage 2') {
