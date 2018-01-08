@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        echo 'pipeline sul branch'
+        echo 'pipeline-altro-branch'
       }
     }
   }
