@@ -1,9 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Stage 1') {
       steps {
-        echo 'master'
+        error 'errore-a-mano'
+      }
+    }
+    stage('Stage 2') {
+      steps {
+        echo 'Executing Stage 2'
+        error 'errore-a-mano'
       }
     }
   }
