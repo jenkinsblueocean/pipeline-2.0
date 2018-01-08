@@ -23,7 +23,14 @@ pipeline {
     stage('Stage 2') {
       steps {
         echo 'Executing Stage 2'
-        error 'errore-a-mano'
+      }
+    }
+    stage('Stage 3') {
+      steps {
+        catchError() {
+          error 'error'
+        }
+        
       }
     }
   }
