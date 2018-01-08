@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Stage 1 parallel') {
           steps {
-            error 'error stage 1 parallel'
+            echo 'no-errors'
           }
         }
         stage('Stage 1 parallel-bis') {
