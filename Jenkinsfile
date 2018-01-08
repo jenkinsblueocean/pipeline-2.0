@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Stage 1') {
       steps {
-        error 'errore-a-mano'
+        echo 'Executing without errors'
       }
     }
     stage('Stage 2') {
