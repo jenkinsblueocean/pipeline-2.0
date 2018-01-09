@@ -27,10 +27,7 @@ pipeline {
     }
     stage('Stage 3') {
       steps {
-        catchError() {
-          error 'errore con catchError'
-        }
-        
+        error 'error gino'
       }
     }
   }
